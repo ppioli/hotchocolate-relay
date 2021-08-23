@@ -1,0 +1,84 @@
+{
+  "name": "webapp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "starty": "yarn run relay; concurrently --kill-others --names \"react-scripts,relay\" \"react-scripts start\" \"yarn run relay --watch\"",
+    "start": "react-scripts start",
+    "build": "yarn run relay && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "update-schema": "get-graphql-schema https://localhost:5000/graphql?sdl > ./schema.graphql",
+    "relay": "yarn run relay-compiler $@"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "babel-eslint": "^10.0.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "farce": "^0.4.5",
+    "found": "^0.6.0",
+    "found-relay": "^0.9.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-relay": "^11.0.2",
+    "react-scripts": "4.0.3",
+    "react-window": "^1.8.6",
+    "relay-runtime": "^11.0.2",
+    "typescript": "^4.3.5",
+    "web-vitals": "^1.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-relay": "^11.0.2",
+    "@types/react-router-config": "^5.0.3",
+    "@types/react-window": "^1.8.5",
+    "@types/relay-runtime": "^11.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "babel-plugin-relay": "^11.0.2",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-relay": "^1.8.2",
+    "eslint-plugin-testing-library": "^4.11.0",
+    "graphql": "^15.5.1",
+    "history": "^5.0.1",
+    "prettier": "2.3.2",
+    "react-router": "^5.1.2",
+    "react-router-config": "^5.1.1",
+    "relay-compiler": "^11.0.2",
+    "relay-compiler-language-typescript": "^14.1.0",
+    "relay-config": "^11.0.2"
+  }
+}
